@@ -11,4 +11,9 @@ class SessionsController < ApplicationController
       # user doenst' exit or password is incorrect
     end
   end
+
+  def destroy
+    session.clear
+    redirect_to login_path
+  end
 end
